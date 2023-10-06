@@ -41,34 +41,20 @@ packer.init({
 -- Install your plugins here
 return packer.startup(function(use)
 	use ("wbthomason/packer.nvim") -- Have packer manage itself	
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {
-        'nvim-tree/nvim-web-devicons', -- optional
-        },
-    }
-    use ("folke/tokyonight.nvim")
-    use 'nvim-tree/nvim-web-devicons' -- OPTIONAL: for file icons
-    use 'lewis6991/gitsigns.nvim' -- OPTIONAL: for git status
-    use 'romgrk/barbar.nvim'
-    use 'xiyaowong/transparent.nvim'
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-    }
-    use 'hrsh7th/cmp-nvim-lsp'
-    -- autocompletion
-    use("hrsh7th/nvim-cmp") -- completion plugin
+    use 'nvim-tree/nvim-tree.lua'
+    use 'nvim-tree/nvim-web-devicons' --for icons
+    use "folke/tokyonight.nvim" -- theme
+    use 'lewis6991/gitsigns.nvim' --  for git status
+    use 'xiyaowong/transparent.nvim' -- to make background transparent
+    use 'nvim-lualine/lualine.nvim' -- for the line eith stats at the bottom
+    use 'hrsh7th/cmp-nvim-lsp' -- for autocompletion
+    use("hrsh7th/nvim-cmp") -- autocompletion plugin
     use("hrsh7th/cmp-buffer") -- source for text in buffer
     use("hrsh7th/cmp-path") -- source for file system paths
 
-    -- snippets
     use("L3MON4D3/LuaSnip") -- snippet engine
     use("saadparwaiz1/cmp_luasnip") -- for autocompletion
     use("rafamadriz/friendly-snippets") -- useful snippets
-    use 'williamboman/mason.nvim'
-    use 'williamboman/mason-lspconfig.nvim'
-    use 'neovim/nvim-lspconfig'
     use 'folke/neodev.nvim'
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
