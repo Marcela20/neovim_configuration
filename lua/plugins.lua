@@ -44,17 +44,17 @@ return packer.startup(function(use)
     use 'nvim-tree/nvim-tree.lua'
     use 'nvim-tree/nvim-web-devicons' --for icons
     use "folke/tokyonight.nvim" -- theme
-    use 'lewis6991/gitsigns.nvim' --  for git status
+    use 'lewis6991/gitsigns.nvim' --  for git status on a bar
     use 'xiyaowong/transparent.nvim' -- to make background transparent
     use 'nvim-lualine/lualine.nvim' -- for the line eith stats at the bottom
     use 'hrsh7th/cmp-nvim-lsp' -- for autocompletion
     use("hrsh7th/nvim-cmp") -- autocompletion plugin
     use("hrsh7th/cmp-buffer") -- source for text in buffer
     use("hrsh7th/cmp-path") -- source for file system paths
-
     use("L3MON4D3/LuaSnip") -- snippet engine
     use("saadparwaiz1/cmp_luasnip") -- for autocompletion
     use("rafamadriz/friendly-snippets") -- useful snippets
+    use 'romgrk/barbar.nvim' -- bar with tabs
     use 'folke/neodev.nvim'
 	if PACKER_BOOTSTRAP then
 		require("packer").sync()
